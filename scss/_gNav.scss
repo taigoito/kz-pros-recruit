@@ -6,9 +6,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   @include row(space-between);
   width: 100%;
   padding: 0 space();
+  transition: background-color 0.25s ease-in-out;
 
   &__siteBrand {
     flex: 0 0 auto;
@@ -39,6 +41,7 @@
 
     a {
       color: themeColor("lightest");
+      transition: color 0.25s ease-in-out;
 
       &:hover {
         opacity: 0.85;
@@ -48,6 +51,16 @@
     &--button {
       a {
         @include button("primaryLight", 10.5rem, space(4));
+      }
+    }
+  }
+
+  &:hover, &--active {
+    @media (min-width: breakpoint("md")) {
+      background-color: themeColor("lightest");
+
+      .gNav__menuItem:not(.gNav__menuItem--button) a {
+        color: themeColor("darkest");;
       }
     }
   }

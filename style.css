@@ -146,12 +146,14 @@ button, input, select, textarea {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0 0.75rem;
+  transition: background-color 0.25s ease-in-out;
 }
 .gNav__siteBrand {
   flex: 0 0 auto;
@@ -186,6 +188,7 @@ button, input, select, textarea {
 }
 .gNav__menuItem a {
   color: #ffffff;
+  transition: color 0.25s ease-in-out;
 }
 .gNav__menuItem a:hover {
   opacity: 0.85;
@@ -216,6 +219,14 @@ button, input, select, textarea {
 .gNav__menuItem--button a:hover {
   text-decoration: none;
   opacity: 0.85;
+}
+@media (min-width: 750px) {
+  .gNav:hover, .gNav--active {
+    background-color: #ffffff;
+  }
+  .gNav:hover .gNav__menuItem:not(.gNav__menuItem--button) a, .gNav--active .gNav__menuItem:not(.gNav__menuItem--button) a {
+    color: #262626;
+  }
 }
 
 /**
