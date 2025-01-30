@@ -2,6 +2,11 @@
  * G Nav
  */
 
+
+:target {
+  scroll-margin-top: space(5);
+}
+
 .gNav {
   position: fixed;
   top: 0;

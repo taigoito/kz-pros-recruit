@@ -142,6 +142,10 @@ button, input, select, textarea {
 /**
  * G Nav
  */
+:target {
+  scroll-margin-top: 6rem;
+}
+
 .gNav {
   position: fixed;
   top: 0;
