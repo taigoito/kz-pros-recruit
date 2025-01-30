@@ -36,3 +36,10 @@ $fontSizes:            (
   xxl:                   clamp(1.75rem, 5.33vw, 4rem), // 32/8
 );
 $linkHoverDecoration:  none;
+
+// Drawer Menu
+$drawerPad:              0.375rem;
+$drawerHeight:           2rem;
+$drawerNaviconDarkBg:    map-get($themeColors, "primary");
+$drawerNaviconDarkColor: map-get($themeColors, "lightest");
+$drawerImageLighten:     none;

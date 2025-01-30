@@ -10,13 +10,21 @@ const windowWidth = window.innerWidth;
 const breakpoint = 750;
 
 window.addEventListener('scroll', () => {
-  if (windowWidth > breakpoint && window.scrollY > 0) {
+  if (windowWidth >= breakpoint && window.scrollY > 0) {
     header.classList.add('gNav--active');
   } else {
     header.classList.remove('gNav--active');
   }
 });
 
+
+// Drawer Menu
+import DrawerMenu from './js/_drawerMenu.js';
+new DrawerMenu({ darkMode: true });
+
+// Evil Icons
+import EvilIcons from './js/_evilIcons.js';
+new EvilIcons();
 
 // Swiper
 import Swiper from 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.esm.browser.js';
